@@ -73,9 +73,11 @@ export type TodolistType = {
     addedDate: string
     order: number
 }
+export type FieldsErrorsType = Array<{ field: string; error: string }>;
 export type ResponseType<D = {}> = {
     resultCode: number
     messages: Array<string>
+    fieldsErrors: FieldsErrorsType
     data: D
 }
 export enum TaskStatuses {
